@@ -1,7 +1,5 @@
 package br.com.cursomc.domain.enums;
 
-import java.util.Arrays;
-
 public enum TipoCliente {
 
     PESSOAFISICA(1, "Pessoa Física"),
@@ -33,5 +31,7 @@ public enum TipoCliente {
                 return tipo;
             }
         }
+        
+        throw new IllegalArgumentException("Id inválido: " + cod);
     }
 }
